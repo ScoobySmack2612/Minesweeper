@@ -4,41 +4,58 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-
-
 /**
  * Created by Heron on 3/15/2017.
  */
 public class Main extends Application {
     Stage window;
-    Scene menu, game;
+    int WIDTH = 0;
+    int HEIGHT= 0;
+    Scene menu, game, won, lost;
+    GridPane boardContainer;
+    HBox gh;
+    Flag flag;
+    String windowIcon = "./images/ms_logo.png";
 
     public static void main(String[] args){
         launch(args);
     }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        window.setTitle("Minesweeper");
-
+        window.setTitle("inesweeper");
+        window.getIcons().add(new Image(windowIcon));
 
         //menu scene elements
         Label welcomeText = new Label("Welcome to Minesweeper :)");
-        Button goButton = new Button("Easy");
-        goButton.setOnAction(e -> {
+        Button easy = new Button("Easy");
+        easy.setOnAction(e -> {
+            int[] level = setDifficulty("easy");
             window.setScene(game);
+            startGame(level);
         });
-
+        Button medium = new Button("Medium");
+        medium.setOnAction(e -> {
+            int[] level = setDifficulty("medium");
+            window.setScene(game);
+            startGame(level);
+        });
+        Button hard = new Button("Hard");
+        hard.setOnAction(e -> {
+            int[] level = setDifficulty("hard");
+            window.setScene(game);
+            startGame(level);
+        });
         //menu scene layout
         VBox mv = new VBox(20);
         mv.getChildren().add(welcomeText);
         mv.setAlignment(Pos.CENTER);
 
         HBox mh = new HBox(20);
-        mh.getChildren().add(goButton);
+        mh.getChildren().addAll(easy,medium,hard);
         mh.setAlignment(Pos.CENTER);
 
         BorderPane menuLayout = new BorderPane();
@@ -50,44 +67,47 @@ public class Main extends Application {
         menu = new Scene(menuLayout, 400,400);
 
         //game scene
-        Label gameText = new Label("Here we go!");
-        gameText.setAlignment(Pos.CENTER);
+        flag = new Flag();
+        flag.setOnAction(e -> flag.setFlagState());
 
-        VBox gv = new VBox(20);
-        gv.getChildren().add(gameText);
+
+        gh = new HBox(20);
+        gh.setAlignment(Pos.CENTER);
+        gh.getChildren().addAll(flag);
 
         BorderPane gameLayout = new BorderPane();
-        gameLayout.setTop(gv);
+        gameLayout.setTop(gh);
 
-        GridPane board = new GridPane();
+        boardContainer = new GridPane();
 
-        game = new Scene(gameLayout, 400,400);
+        game = new Scene(gameLayout, 570,600);
 
-        board.setPadding(new Insets(0,0,0,0) );
-        board.setAlignment(Pos.CENTER);
-        gameLayout.setCenter(board);
-
-        Tile[][] tile = getBoard(8, board);
-
-
+        boardContainer.setPadding(new Insets(0,0,0,0) );
+        boardContainer.setAlignment(Pos.CENTER);
+        gameLayout.setCenter(boardContainer);
 
         window.setScene(menu);
         window.show();
     }
-    private static Tile[][] getBoard(int size, GridPane board){
-        //instantiate tile in board layout
-        Tile[][] tile = new Tile[size][size];
-        for (int x = 0; x < size; x ++){
-            for (int y = 0; y < size; y++){
-                //get a button with referable location
-                Tile slot = new Tile(x,y);
-                //set referable location to easy callback
-                slot.setId(slot.getPosAsString());
-                //add the button to the gridpane layout in the position of loop
-                board.add(slot, x,y);
-                tile[x][y] = slot;
-            }
+    private int[] setDifficulty(String DIFFICULTY){
+        int result[] = new int[2];
+        if (DIFFICULTY == "easy"){
+            result[0] = 8;
+            result[1] = 10;
+        }else if (DIFFICULTY == "medium"){
+            result[0] = 10;
+            result[1] = 12;
+        }else if (DIFFICULTY == "hard"){
+            result[0] = 12;
+            result[1] = 14;
         }
-        return tile;
+
+        return result;
+    }
+    private void startGame(int[] level){
+        int size = level[0];
+        int mines = level[1];
+        GameBoard theBoard = new GameBoard(size,mines, boardContainer, window, menu,flag, gh,game);
+        window.setOnCloseRequest(e->theBoard.quitApplication());
     }
 }

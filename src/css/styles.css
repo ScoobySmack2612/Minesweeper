@@ -1,0 +1,6 @@
+.clock{
+    -fx-text-fill: 'rgb(0, 187, 222)';
+    -fx-font-family: 'DS-Digital';
+    -fx-font-size: 30;
+    -fx-background-color: 'black';
+}
