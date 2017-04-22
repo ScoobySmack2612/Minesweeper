@@ -26,6 +26,7 @@ public class Main extends Application {
     User userModel = new User();
     ArrayList<String> userList;
     private int selectedUser;
+    private String selectedDifficulty;
     private boolean userChosen = false;
 
     public static void main(String[] args){
@@ -44,18 +45,21 @@ public class Main extends Application {
         Button easy = new Button("Easy");
         easy.setOnAction(e -> {
             int[] level = setDifficulty("easy");
+            this.selectedDifficulty="Easy";
             window.setScene(game);
             startGame(level);
         });
         Button medium = new Button("Medium");
         medium.setOnAction(e -> {
             int[] level = setDifficulty("medium");
+            this.selectedDifficulty="Medium";
             window.setScene(game);
             startGame(level);
         });
         Button hard = new Button("Hard");
         hard.setOnAction(e -> {
             int[] level = setDifficulty("hard");
+            this.selectedDifficulty="Hard";
             window.setScene(game);
             startGame(level);
         });
@@ -176,7 +180,7 @@ public class Main extends Application {
     private void startGame(int[] level){
         int size = level[0];
         int mines = level[1];
-        GameBoard theBoard = new GameBoard(size,mines, boardContainer, window, menu, gh,game,selectedUser);
+        GameBoard theBoard = new GameBoard(size,mines, boardContainer, window, menu, gh,game,selectedUser,selectedDifficulty);
         window.setOnCloseRequest(e->theBoard.quitApplication());
     }
     private void getUsersList(User userModel, Menu usersDropdown){

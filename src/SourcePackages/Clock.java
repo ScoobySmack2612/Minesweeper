@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -68,4 +69,5 @@ public class Clock extends Label {
     private void loadStyleSheet(){
         scene.getStylesheets().add(getClass().getResource("../css/styles.css").toExternalForm());
     }
+    public long timeInMillis(){return this.difference;}
 }

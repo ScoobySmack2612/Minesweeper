@@ -1,7 +1,6 @@
 package SourcePackages.db.components.Tables;
 
 import SourcePackages.db.components.DbUtilities.Utilities;
-import com.mysql.jdbc.Util;
 import javafx.scene.control.MenuItem;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -53,11 +52,12 @@ public class User {
 
         try {
 
-            String statement = ("INSERT INTO user" +
+            String insertStatement = ("INSERT INTO user" +
                     " (first_name, last_name) " +
-                    "VALUES" + " (" + "'" + fn + "'" + "," + "'" + ln + "'" + ")");
+                    "VALUES" +
+                    " (" + "'" + fn + "'" + "," + "'" + ln + "'" + ")");
 
-            boolean inserted = util.insertRecord(statement);
+            boolean inserted = util.insertRecord(insertStatement);
             if (inserted) {
                 result = true;
             } else {
@@ -69,7 +69,7 @@ public class User {
         }finally {
             util.closeDbCon();
         }
-        return true;
+        return false;
     }
     public int getUserId(String key){ return this.userDictionary.get(key); }
 }

@@ -1,5 +1,6 @@
 package SourcePackages;
 
+import SourcePackages.db.components.Tables.Score;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
@@ -11,6 +12,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+
 /**
  * Created by Heron on 4/4/2017.
  */
@@ -28,9 +30,11 @@ public class GameBoard {
     Clock clock;
     private boolean timing;
     String finalTime = "";
+    private long score;
     private int user;
+    private String difficulty;
 
-    public GameBoard(int size, int mines, GridPane layout, Stage window, Scene menu,HBox heading,Scene game, int selectedUser) {
+    public GameBoard(int size, int mines, GridPane layout, Stage window, Scene menu,HBox heading,Scene game, int selectedUser,String difficulty) {
         this.size = size;
         this.numMines = mines;
         this.window = window;
@@ -39,6 +43,7 @@ public class GameBoard {
         this.header = heading;
         this.game = game;
         this.user = selectedUser;
+        this.difficulty = difficulty;
 
         this.setMines();
 
@@ -53,6 +58,7 @@ public class GameBoard {
         this.header.getChildren().add(clock);
     }
     private void stopClock(){
+        this.score = clock.timeInMillis();
         this.finalTime = clock.stopTimer();
     }
     private void setMineStates(){
@@ -135,7 +141,7 @@ public class GameBoard {
                         } else{
                             squareClicked.setNumMineTileStyles(surroundingMines);
                         }
-                        boolean won = setWin();
+                        boolean won = checkForWin();
                         if (won&&!gameEnded) {
                             this.stopClock();
                             setWinScene();
@@ -235,7 +241,7 @@ public class GameBoard {
             }
         }
     }
-    private boolean setWin(){
+    private boolean checkForWin(){
         boolean result = true;
         for (Tile[] row: this.board){
             for (Tile slot : row){
@@ -253,11 +259,21 @@ public class GameBoard {
         replay.setOnAction(e ->window.setScene(menu));
         Button quit = new Button("Quit");
         quit.setOnAction(e -> this.quitApplication());
+        Button addScore = new Button("Save Score!");
+        addScore.setOnAction(e ->{
+
+            Score newScore =new Score();
+            boolean scoreEntered = newScore.enterScore(difficulty,score,finalTime,user);
+            if (scoreEntered){
+                addScore.setVisible(false);
+            }
+
+        });
 
         Rainbow rainbow = new Rainbow(75,300,50,100);
 
-        VBox wonVB = new VBox(20);
-        wonVB.getChildren().addAll(wonTxt,rainbow);
+        VBox wonVB = new VBox(30);
+        wonVB.getChildren().addAll(wonTxt,rainbow,addScore);
         wonVB.setAlignment(Pos.CENTER);
 
         HBox wonHB = new HBox(20);

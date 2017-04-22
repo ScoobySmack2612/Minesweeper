@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1aefd6a-f66c-493e-94af-baf0cc2f8e88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Clock$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Clock$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Clock.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Flag.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GameBoard$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GameBoard$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/GameBoard.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Mine.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Minesweeper/Tile.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Clock.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Clock.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Flag.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Flag.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GameBoard.java" afterPath="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Mine.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Mine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Tile.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Tile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock$1$1.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock$1.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Clock.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$1.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$2.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$3.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/GameBoard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Main.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/db/components/Tables/User.class" afterPath="$PROJECT_DIR$/out/production/Minesweeper/SourcePackages/db/components/Tables/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Minesweeper.iml" afterPath="$PROJECT_DIR$/Minesweeper.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/Clock.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Clock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" afterPath="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/Main.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,14 +32,40 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="574">
-              <caret line="189" column="63" lean-forward="false" selection-start-line="189" selection-start-column="63" selection-end-line="189" selection-end-column="63" />
+            <state relative-caret-position="2475">
+              <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
+              <folding>
+                <element signature="docComment;class#Main#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="267" column="43" lean-forward="false" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Main#0" expanded="false" />
+                <element signature="docComment;class#GameBoard#0" expanded="false" />
+                <element signature="e#11057#11314#0" expanded="true" />
+                <element signature="e#11313#11314#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SourcePackages/Clock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1640">
+              <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,41 +74,23 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2665">
-              <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8446">
-              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="2132">
+              <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
               <folding>
-                <element signature="docComment;class#GameBoard#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Clock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SourcePackages/Clock.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
-              <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-              <folding />
+              <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Rainbow.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Mine.java" />
-        <option value="$PROJECT_DIR$/src/SourcePackages/Clock.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/tables/Users.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/tables/User.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Query.java" />
@@ -145,8 +148,10 @@
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbCon/Connect.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbUtilities/Utilities.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" />
-        <option value="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Main.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/Clock.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
       </list>
     </option>
   </component>
@@ -550,7 +555,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.96967745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.96967745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -628,7 +633,6 @@
         <state relative-caret-position="3895">
           <caret line="104" column="69" lean-forward="false" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -639,7 +643,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -663,7 +670,6 @@
         <state relative-caret-position="3895">
           <caret line="104" column="69" lean-forward="false" selection-start-line="104" selection-start-column="69" selection-end-line="104" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -674,7 +680,10 @@
         <state relative-caret-position="1148">
           <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -691,7 +700,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -702,7 +710,6 @@
         <state relative-caret-position="4387">
           <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -720,7 +727,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,7 +747,6 @@
         <state relative-caret-position="3895">
           <caret line="104" column="56" lean-forward="true" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -755,7 +764,10 @@
         <state relative-caret-position="984">
           <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -772,7 +784,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -790,7 +801,10 @@
         <state relative-caret-position="1189">
           <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -807,7 +821,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -825,7 +838,10 @@
         <state relative-caret-position="1189">
           <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,7 +858,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -860,7 +875,10 @@
         <state relative-caret-position="1189">
           <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,13 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="963" column="22" lean-forward="false" selection-start-line="963" selection-start-column="22" selection-end-line="963" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -950,46 +961,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2665">
-          <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="2132">
+          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="189" column="63" lean-forward="false" selection-start-line="189" selection-start-column="63" selection-end-line="189" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Main#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="381">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/Clock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="57" column="35" lean-forward="true" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8446">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        <state relative-caret-position="1640">
+          <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
           <folding>
-            <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="287">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="267" column="43" lean-forward="false" selection-start-line="267" selection-start-column="43" selection-end-line="267" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#GameBoard#0" expanded="false" />
+            <element signature="e#11057#11314#0" expanded="true" />
+            <element signature="e#11313#11314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
