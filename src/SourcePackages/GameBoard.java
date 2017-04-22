@@ -1,3 +1,5 @@
+package SourcePackages;
+
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
@@ -5,6 +7,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 /**
@@ -24,20 +28,24 @@ public class GameBoard {
     Clock clock;
     private boolean timing;
     String finalTime = "";
-    public GameBoard(int size, int mines, GridPane layout, Stage window, Scene menu,Flag flag,HBox heading,Scene game) {
+    private int user;
+
+    public GameBoard(int size, int mines, GridPane layout, Stage window, Scene menu,HBox heading,Scene game, int selectedUser) {
         this.size = size;
         this.numMines = mines;
         this.window = window;
         this.menu = menu;
-        this.flag = flag;
         this.gameboard = layout;
         this.header = heading;
         this.game = game;
+        this.user = selectedUser;
 
         this.setMines();
-        this.setBoardArray(this.gameboard);
+
+        this.setBoardArray();
         this.setMineStates();
         this.setNonMineStates();
+        this.setFlag();
     }
     private void startClock(){
         timing = true;
@@ -68,7 +76,26 @@ public class GameBoard {
             }
         }
     }
-    private void setBoardArray(GridPane boardContainer) {
+    private void setFlag(){
+        flag = new Flag();
+        header.getChildren().add(flag);
+        flag.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(final KeyEvent keyEvent) {
+                if (keyEvent.getCode() == KeyCode.F){
+                    flag.setFlagState();
+                    keyEvent.consume();
+                }
+            }
+        });
+        flag.setOnAction( e ->{
+           if (!gameEnded){
+               flag.setFlagState();
+           }
+        });
+    }
+    private void setBoardArray() {
+        GridPane boardContainer = this.gameboard;
         board = new Tile[this.size][this.size];
         for (int x = 0; x < this.size; x++) {
             for (int y = 0; y < this.size; y++) {
@@ -104,27 +131,32 @@ public class GameBoard {
                         if (surroundingMines == 0) {
                             squareClicked.setBlankTileStyles();
                             this.openOnUp(squareClicked);
-                        } else {
+
+                        } else{
                             squareClicked.setNumMineTileStyles(surroundingMines);
                         }
-                    }
-                    boolean won = setWin();
-                    if (won&&!gameEnded) {
-                        this.stopClock();
-                        setWinScene();
+                        boolean won = setWin();
+                        if (won&&!gameEnded) {
+                            this.stopClock();
+                            setWinScene();
+                        }
+                        else{
+                            return;
+                        }
                     }
                 } catch (NullPointerException e) {
-                    System.out.println("ERROR: Could not find mine in question");
+                    e.printStackTrace();
                 }
             } else if (this.flag.isClicked()) {
                 if (!squareClicked.isFlagged()&&!squareClicked.isClicked()) {
                     squareClicked.setFlagStyles();
+                    return;
                 }
             }
-        }else if (squareClicked.isFlagged() && !gameEnded){
+        }else if (squareClicked.isFlagged()&& this.flag.isClicked() && !gameEnded){
             squareClicked.setNonFlagStyles();
+            return;
         }
-        this.setWin();
     }
     private void setMines(){
         mines = new Mine[numMines];
@@ -196,8 +228,8 @@ public class GameBoard {
                         toCheck.setBlankTileStyles();
                         openOnUp(toCheck);
                     }else if (toCheck.getState()=='N'&&!toCheck.isFlagged()){
-                        int numNieghborMines = this.countSurroundingMines(toCheck);
-                        toCheck.setNumMineTileStyles(numNieghborMines);
+                        int numNeighborMines = this.countSurroundingMines(toCheck);
+                        toCheck.setNumMineTileStyles(numNeighborMines);
                     }
                 }
             }
@@ -218,12 +250,14 @@ public class GameBoard {
     private void setWinScene(){
         Label wonTxt = new Label("Congratulations! You beat the game! Your time was: "+this.finalTime);
         Button replay = new Button("Again!!!");
-        replay.setOnAction(e ->this.quitApplication());
+        replay.setOnAction(e ->window.setScene(menu));
         Button quit = new Button("Quit");
-        quit.setOnAction(e -> window.close());
+        quit.setOnAction(e -> this.quitApplication());
+
+        Rainbow rainbow = new Rainbow(75,300,50,100);
 
         VBox wonVB = new VBox(20);
-        wonVB.getChildren().addAll(wonTxt);
+        wonVB.getChildren().addAll(wonTxt,rainbow);
         wonVB.setAlignment(Pos.CENTER);
 
         HBox wonHB = new HBox(20);
@@ -305,7 +339,7 @@ public class GameBoard {
 
             }
         }
-        this.header.getChildren().remove(clock);
+        this.header.getChildren().removeAll(clock, flag);
     }
     public void quitApplication(){
         if (timing) {

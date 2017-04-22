@@ -1,11 +1,10 @@
+package SourcePackages;
+
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.text.SimpleDateFormat;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -61,12 +60,12 @@ public class Clock extends Label {
     }
     private void loadFont(){
         try {
-            Font.loadFont(Clock.class.getResource("./fonts/DS-DIGIB.TTF").toExternalForm(), 10);
+            Font.loadFont(Clock.class.getResource("../fonts/DS-DIGIB.TTF").toExternalForm(), 10);
         }catch (Exception e){
             e.printStackTrace();
         }
     }
     private void loadStyleSheet(){
-        scene.getStylesheets().add(getClass().getResource("./css/styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("../css/styles.css").toExternalForm());
     }
 }
