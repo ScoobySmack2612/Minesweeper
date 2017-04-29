@@ -2,7 +2,10 @@ package SourcePackages.db.components.Tables;
 
 import SourcePackages.db.components.DbUtilities.Utilities;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 
 /**
  * Created by Heron on 4/22/2017.
@@ -36,7 +39,22 @@ public class Score {
     public void getTopScores(){
 
     }
-    public void getUserScores(){
+    public ArrayList<ResultSet> getUserScores(int userId){
+        ArrayList<ResultSet> scores = new ArrayList<>();
+        Utilities util = new Utilities();
 
+        try{
+            String query = "select * from score where user_id = "+userId+" order by time";
+
+            ResultSet result = util.mkQuery(query);
+            while(result.next()){
+                scores.add(result);
+            }
+        }catch(Exception e){
+            System.out.println(e);
+        }finally {
+            util.closeDbCon();
+        }
+        return null;
     }
 }

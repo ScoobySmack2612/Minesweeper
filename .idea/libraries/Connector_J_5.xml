@@ -2,6 +2,7 @@
   <library name="Connector.J 5">
     <CLASSES>
       <root url="file://C:/Program Files (x86)/MySQL/Connector.J 5.1" />
+      <root url="jar://$USER_HOME$/Downloads/Java Libs/jackson-all-1.9.0.jar/jackson-all-1.9.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

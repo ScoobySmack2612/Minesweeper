@@ -1,10 +1,12 @@
 package SourcePackages;
 
 import SourcePackages.db.components.Tables.Score;
+import SourcePackages.db.components.Tables.User;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -125,11 +127,12 @@ public class GameBoard {
                     for (Mine mine : this.mines) {
                         String mineId = mine.getId();
                         if ((squareClicked.getId()).equals(mineId)) {
-                            isMine = true;
+                            /*isMine = true;
                             gameEnded = true;
                             this.stopClock();
                             this.showAllTiles();
-                            timeout();
+                            timeout();*/
+                            this.setWinScene();
                         }
                     }
                     if (!isMine) {
@@ -266,8 +269,8 @@ public class GameBoard {
             boolean scoreEntered = newScore.enterScore(difficulty,score,finalTime,user);
             if (scoreEntered){
                 addScore.setVisible(false);
+                UserScore us = new UserScore(window,user);
             }
-
         });
 
         Rainbow rainbow = new Rainbow(75,300,50,100);
