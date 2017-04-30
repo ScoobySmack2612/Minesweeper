@@ -31,10 +31,10 @@ public class GameBoard {
     private Flag flag;
     Clock clock;
     private boolean timing;
-    String finalTime = "";
+    String finalTime = "00:00";
     private long score;
     private int user;
-    private String difficulty;
+    private String difficulty = null;
 
     public GameBoard(int size, int mines, GridPane layout, Stage window, Scene menu,HBox heading,Scene game, int selectedUser,String difficulty) {
         this.size = size;
@@ -262,22 +262,26 @@ public class GameBoard {
         replay.setOnAction(e ->window.setScene(menu));
         Button quit = new Button("Quit");
         quit.setOnAction(e -> this.quitApplication());
-        Button addScore = new Button("Save Score!");
-        addScore.setOnAction(e ->{
 
+        VBox wonVB = new VBox(30);
+        wonVB.setAlignment(Pos.CENTER);
+
+        Button addScore = new Button("Save Score!");
+        wonVB.getChildren().addAll(wonTxt,addScore);
+        addScore.setOnAction(e ->{
             Score newScore =new Score();
             boolean scoreEntered = newScore.enterScore(difficulty,score,finalTime,user);
             if (scoreEntered){
                 addScore.setVisible(false);
-                UserScore us = new UserScore(window,user);
+                Button userScores = new Button("View Your Scores");
+                userScores.setOnAction( ex -> new UserScore(window,user,menu));
+
+                Button leaderboard = new Button("View Leaderboard");
+                leaderboard.setOnAction( ex -> new LeaderBoard());
+
+                wonVB.getChildren().addAll(userScores,leaderboard);
             }
         });
-
-        Rainbow rainbow = new Rainbow(75,300,50,100);
-
-        VBox wonVB = new VBox(30);
-        wonVB.getChildren().addAll(wonTxt,rainbow,addScore);
-        wonVB.setAlignment(Pos.CENTER);
 
         HBox wonHB = new HBox(20);
         wonHB.getChildren().addAll(replay,quit);

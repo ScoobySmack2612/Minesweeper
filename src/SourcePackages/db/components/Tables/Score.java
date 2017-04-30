@@ -1,7 +1,15 @@
 package SourcePackages.db.components.Tables;
 
+import SourcePackages.db.components.DbObjects.UserScoreObject;
 import SourcePackages.db.components.DbUtilities.Utilities;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
+import org.codehaus.jackson.annotate.JsonAutoDetect;
+import org.codehaus.jackson.annotate.JsonMethod;
+import org.codehaus.jackson.map.ObjectMapper;
 
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayDeque;
@@ -39,17 +47,23 @@ public class Score {
     public void getTopScores(){
 
     }
-    public ArrayList<ResultSet> getUserScores(int userId){
-        ArrayList<ResultSet> scores = new ArrayList<>();
+    public ObservableList<UserScoreObject> getUserScores(int userId){
+        ObservableList<UserScoreObject> scores = FXCollections.observableArrayList();
+        int rank = 1;
         Utilities util = new Utilities();
 
         try{
-            String query = "select * from score where user_id = "+userId+" order by time";
+            String query = "select * from score where user_id = "+userId+" order by time LIMIT 10";
 
             ResultSet result = util.mkQuery(query);
             while(result.next()){
-                scores.add(result);
+                String difficulty = result.getString("difficulty");
+                String time = result.getString("time");
+                long score = result.getLong("score");
+                scores.add(new UserScoreObject(userId,rank,difficulty,time, score));
+                rank++;
             }
+            return scores;
         }catch(Exception e){
             System.out.println(e);
         }finally {

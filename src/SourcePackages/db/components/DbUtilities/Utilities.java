@@ -1,6 +1,9 @@
 package SourcePackages.db.components.DbUtilities;
 
 import SourcePackages.db.components.DbCon.Connect;
+import javafx.concurrent.Task;
+import javafx.concurrent.WorkerStateEvent;
+import javafx.event.EventHandler;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -34,6 +37,7 @@ public class Utilities {
     public boolean insertRecord(String insertion){
         try{
             statement.executeUpdate(insertion);
+            timeout();
             return true;
         }catch(SQLException e){
             e.printStackTrace();
@@ -46,5 +50,18 @@ public class Utilities {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+    private void timeout(){
+        Task<Void> sleeper = new Task<Void>(){
+            @Override
+            protected Void call() throws Exception{
+                try {
+                    Thread.sleep(2000);
+                }catch (InterruptedException e){
+
+                }return null;
+            }
+        };
+        new Thread(sleeper).start();
     }
 }
