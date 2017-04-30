@@ -1,19 +1,11 @@
 package SourcePackages.db.components.Tables;
 
+import SourcePackages.db.components.DbObjects.LeaderBoardObject;
 import SourcePackages.db.components.DbObjects.UserScoreObject;
 import SourcePackages.db.components.DbUtilities.Utilities;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
-import org.codehaus.jackson.annotate.JsonAutoDetect;
-import org.codehaus.jackson.annotate.JsonMethod;
-import org.codehaus.jackson.map.ObjectMapper;
-
-import java.io.File;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
 
 /**
  * Created by Heron on 4/22/2017.
@@ -44,8 +36,27 @@ public class Score {
         }
         return false;
     }
-    public void getTopScores(){
+    public ObservableList<LeaderBoardObject> getTopScores(){
+        ObservableList<LeaderBoardObject> leaderboard = FXCollections.observableArrayList();
+        int rank = 1;
+        Utilities util = new Utilities();
+        try {
+            ResultSet rs = util.mkQuery("SELECT * FROM score ORDER BY time LIMIT 10");
 
+            while(rs.next()){
+                int userId = rs.getInt("user_id");
+                String difficulty = rs.getString("difficulty");
+                String time = rs.getString("time");
+                long score = rs.getLong("score");
+                leaderboard.add(new LeaderBoardObject(userId,rank,difficulty,time, score));
+                rank++;
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }finally{
+            util.closeDbCon();
+        }
+        return null;
     }
     public ObservableList<UserScoreObject> getUserScores(int userId){
         ObservableList<UserScoreObject> scores = FXCollections.observableArrayList();

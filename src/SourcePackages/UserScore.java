@@ -37,8 +37,8 @@ public class UserScore{
             Tab tab = new Tab();
             tab.setText(tabs[x]);
             tp.getTabs().add(tab);
-            tab.setContent(getTabContent(tableHeader,tab,scores));
-            tab.setOnSelectionChanged(e -> getTabContent(tableHeader,tab,scores));
+            tab.setContent(getTabContent(tab,scores));
+            tab.setOnSelectionChanged(e -> getTabContent(tab,scores));
         }
         BorderPane bp = new BorderPane();
         bp.setTop(tableHeader);
@@ -50,7 +50,7 @@ public class UserScore{
     private ObservableList<UserScoreObject> getUserScores(){
         return new Score().getUserScores(userId);
     }
-    private TableView getTabContent(VBox header, Tab tab,ObservableList<UserScoreObject> scores){
+    private TableView getTabContent(Tab tab,ObservableList<UserScoreObject> scores){
         TableColumn[] columns = {new TableColumn("Rank"), new TableColumn("Score"), new TableColumn("Time")};
         TableView tv = new TableView();
         for (UserScoreObject usc : scores) {

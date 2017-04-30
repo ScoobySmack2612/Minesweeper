@@ -72,4 +72,25 @@ public class User {
         return false;
     }
     public int getUserId(String key){ return this.userDictionary.get(key); }
+
+    public String getUserById(int userId){
+        Utilities util = new Utilities();
+
+        try{
+            ResultSet rs = util.mkQuery("SELECT * where id = "+userId);
+
+            while(rs.next()){
+                String fn = rs.getString("first_name");
+                String ln = rs.getString("last_name");
+
+                return (fn +" "+ln);
+            }
+
+        }catch(Exception e){
+            System.out.println(e);
+        }finally{
+            util.closeDbCon();
+        }
+        return null;
+    }
 }
