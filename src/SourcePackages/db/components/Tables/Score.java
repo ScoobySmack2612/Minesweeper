@@ -44,13 +44,14 @@ public class Score {
             ResultSet rs = util.mkQuery("SELECT * FROM score ORDER BY time LIMIT 10");
 
             while(rs.next()){
-                int userId = rs.getInt("user_id");
+                String username = new User().getUserById(rs.getInt("user_id"));
                 String difficulty = rs.getString("difficulty");
                 String time = rs.getString("time");
                 long score = rs.getLong("score");
-                leaderboard.add(new LeaderBoardObject(userId,rank,difficulty,time, score));
+                leaderboard.add(new LeaderBoardObject(username,rank,difficulty,time, score));
                 rank++;
             }
+            return leaderboard;
         }catch (Exception e){
             System.out.println(e);
         }finally{

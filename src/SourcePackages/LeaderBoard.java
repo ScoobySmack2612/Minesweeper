@@ -50,15 +50,17 @@ public class LeaderBoard {
     }
     private ObservableList<LeaderBoardObject> getTopScores(){return new Score().getTopScores();}
     private TableView getTabContent(Tab tab, ObservableList<LeaderBoardObject> scores){
-        TableColumn[] columns = {new TableColumn("Rank"), new TableColumn("Score"), new TableColumn("Time")};
+        TableColumn[] columns = {new TableColumn("Rank"), new TableColumn("User"),new TableColumn("Score"), new TableColumn("Time")};
         TableView tv = new TableView();
         for (LeaderBoardObject usc : scores) {
             if (tab.getText().equals(usc.getDifficulty())) {
                 for (TableColumn column : columns) {
                     tv.getColumns().remove(column);
                     tv.getColumns().add(column);
-                    if (column.getText().equals("Rank")){
+                    if (column.getText().equals("Rank")) {
                         column.setCellValueFactory(new PropertyValueFactory<>("rank"));
+                    }else if (column.getText().equals("User")){
+                        column.setCellValueFactory(new PropertyValueFactory<>("username"));
                     }else if (column.getText().equals("Score")) {
                         column.setCellValueFactory(new PropertyValueFactory<>("score"));
                     }else if (column.getText().equals("Time")) {

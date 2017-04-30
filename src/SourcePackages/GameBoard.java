@@ -277,7 +277,7 @@ public class GameBoard {
                 userScores.setOnAction( ex -> new UserScore(window,user,menu));
 
                 Button leaderboard = new Button("View Leaderboard");
-                leaderboard.setOnAction( ex -> new LeaderBoard());
+                leaderboard.setOnAction( ex -> new LeaderBoard(window,menu));
 
                 wonVB.getChildren().addAll(userScores,leaderboard);
             }

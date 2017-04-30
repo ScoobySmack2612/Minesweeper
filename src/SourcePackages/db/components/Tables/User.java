@@ -77,7 +77,7 @@ public class User {
         Utilities util = new Utilities();
 
         try{
-            ResultSet rs = util.mkQuery("SELECT * where id = "+userId);
+            ResultSet rs = util.mkQuery("SELECT * FROM user where id = "+userId);
 
             while(rs.next()){
                 String fn = rs.getString("first_name");
