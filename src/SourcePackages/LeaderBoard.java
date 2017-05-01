@@ -78,7 +78,7 @@ public class LeaderBoard {
         tv.setId(tab.getText());
         tv.setItems(scores);
         tab.setContent(tv);
-        tv.setPlaceholder(new Label("You don't have any "+tab.getText()+ " records."));
+        tv.setPlaceholder(new Label("There are no "+tab.getText()+ " records."));
         return tv;
     }
 }

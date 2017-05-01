@@ -1,12 +1,10 @@
 package SourcePackages;
 
 import SourcePackages.db.components.Tables.Score;
-import SourcePackages.db.components.Tables.User;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
