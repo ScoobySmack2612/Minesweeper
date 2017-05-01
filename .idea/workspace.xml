@@ -5,9 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" afterPath="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/LeaderBoard.java" afterPath="$PROJECT_DIR$/src/SourcePackages/LeaderBoard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/LeaderBoardObject.java" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/LeaderBoardObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" afterPath="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/Main.java" afterPath="$PROJECT_DIR$/src/SourcePackages/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SourcePackages/UserScore.java" afterPath="$PROJECT_DIR$/src/SourcePackages/UserScore.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="279" column="75" lean-forward="false" selection-start-line="279" selection-start-column="75" selection-end-line="279" selection-end-column="75" />
+            <state relative-caret-position="205">
+              <caret line="129" column="28" lean-forward="false" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
               <folding>
                 <element signature="docComment;class#GameBoard#0" expanded="false" />
               </folding>
@@ -38,7 +37,7 @@
       <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
+            <state relative-caret-position="1968">
               <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,8 +49,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7011">
-              <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
+            <state relative-caret-position="466">
+              <caret line="168" column="81" lean-forward="false" selection-start-line="168" selection-start-column="81" selection-end-line="168" selection-end-column="81" />
               <folding>
                 <element signature="docComment;class#Main#0" expanded="false" />
               </folding>
@@ -62,22 +61,20 @@
       <file leaf-file-name="UserScore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/UserScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1271">
-              <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+            <state relative-caret-position="794">
+              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
                 <element signature="docComment;class#UserScore#0" expanded="false" />
-                <element signature="e#1613#1614#0" expanded="false" />
-                <element signature="e#1669#1670#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LeaderBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LeaderBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/LeaderBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+            <state relative-caret-position="179">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="40" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,11 +98,9 @@
       <file leaf-file-name="LeaderBoardObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/LeaderBoardObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
+            <state relative-caret-position="287">
               <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,9 +108,11 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="3034">
               <caret line="79" column="60" lean-forward="false" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,16 +181,16 @@
         <option value="$PROJECT_DIR$/src/SourcePackages/Flag.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Tile.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbCon/Connect.java" />
-        <option value="$PROJECT_DIR$/src/SourcePackages/Main.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/Clock.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/UserScoreObject.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbUtilities/Utilities.java" />
-        <option value="$PROJECT_DIR$/src/SourcePackages/UserScore.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/LeaderBoardObject.java" />
-        <option value="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/Main.java" />
         <option value="$PROJECT_DIR$/src/SourcePackages/LeaderBoard.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/UserScore.java" />
+        <option value="$PROJECT_DIR$/src/SourcePackages/GameBoard.java" />
       </list>
     </option>
   </component>
@@ -644,7 +641,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32333767" sideWeight="0.50258064" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33376792" sideWeight="0.49741936" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33376792" sideWeight="0.49741936" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1018,16 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7011">
-          <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="66" selection-end-line="185" selection-end-column="66" />
-          <folding>
-            <element signature="docComment;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/UserScoreObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
@@ -1039,49 +1026,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourcePackages/UserScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1271">
-          <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-          <folding>
-            <element signature="docComment;class#UserScore#0" expanded="false" />
-            <element signature="e#1613#1614#0" expanded="false" />
-            <element signature="e#1669#1670#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/DbObjects/LeaderBoardObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="287">
           <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="279" column="75" lean-forward="false" selection-start-line="279" selection-start-column="75" selection-end-line="279" selection-end-column="75" />
-          <folding>
-            <element signature="docComment;class#GameBoard#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
+        <state relative-caret-position="3034">
           <caret line="79" column="60" lean-forward="false" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourcePackages/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="168" column="81" lean-forward="false" selection-start-line="168" selection-start-column="81" selection-end-line="168" selection-end-column="81" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/db/components/Tables/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
+        <state relative-caret-position="1968">
           <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1091,10 +1066,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SourcePackages/LeaderBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="62" column="43" lean-forward="false" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        <state relative-caret-position="179">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="40" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourcePackages/UserScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="docComment;class#UserScore#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SourcePackages/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="129" column="28" lean-forward="false" selection-start-line="129" selection-start-column="28" selection-end-line="129" selection-end-column="28" />
+          <folding>
+            <element signature="docComment;class#GameBoard#0" expanded="false" />
           </folding>
         </state>
       </provider>

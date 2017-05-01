@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -29,10 +30,15 @@ public class UserScore{
         tableHeader.getChildren().addAll(tp);
 
         //elements
-
         Button mm = new Button("Main Menu");
         mm.setOnAction( e -> window.setScene(menu));
 
+        Button leaderboard = new Button("Leaderboard");
+        leaderboard.setOnAction( e -> new LeaderBoard(window,menu,userId));
+
+
+        HBox buttons = new HBox();
+        buttons.getChildren().addAll(mm,leaderboard);
         for (int x = 0; x < tabs.length; x++) {
             Tab tab = new Tab();
             tab.setText(tabs[x]);
@@ -42,7 +48,7 @@ public class UserScore{
         }
         BorderPane bp = new BorderPane();
         bp.setTop(tableHeader);
-        bp.setBottom(mm);
+        bp.setBottom(buttons);
         root.getChildren().add(bp);
 
         window.setScene(new Scene(root,300,475));

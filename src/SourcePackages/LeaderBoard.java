@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,8 +18,7 @@ import javafx.stage.Stage;
  * Created by Heron on 4/24/2017.
  */
 public class LeaderBoard {
-
-    public LeaderBoard(Stage window, Scene menu){
+    public LeaderBoard(Stage window, Scene menu,int userId){
         ObservableList<LeaderBoardObject> leaderboard = getTopScores();
         Group root = new Group();
         //layouts
@@ -33,6 +33,12 @@ public class LeaderBoard {
 
         Button mm = new Button("Main Menu");
         mm.setOnAction( e -> window.setScene(menu));
+        Button userScores = new Button("Your Scores");
+        userScores.setOnAction( e -> new UserScore(window,userId,menu));
+
+
+        HBox buttons = new HBox();
+        buttons.getChildren().addAll(mm,userScores);
 
         for (int x = 0; x < tabs.length; x++) {
             Tab tab = new Tab();
@@ -43,7 +49,7 @@ public class LeaderBoard {
         }
         BorderPane bp = new BorderPane();
         bp.setTop(tableHeader);
-        bp.setBottom(mm);
+        bp.setBottom(buttons);
         root.getChildren().add(bp);
 
         window.setScene(new Scene(root,300,475));

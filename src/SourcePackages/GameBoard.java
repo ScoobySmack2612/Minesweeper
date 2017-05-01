@@ -127,12 +127,11 @@ public class GameBoard {
                     for (Mine mine : this.mines) {
                         String mineId = mine.getId();
                         if ((squareClicked.getId()).equals(mineId)) {
-                            /*isMine = true;
+                            isMine = true;
                             gameEnded = true;
                             this.stopClock();
                             this.showAllTiles();
-                            timeout();*/
-                            this.setWinScene();
+                            timeout();
                         }
                     }
                     if (!isMine) {
@@ -277,7 +276,7 @@ public class GameBoard {
                 userScores.setOnAction( ex -> new UserScore(window,user,menu));
 
                 Button leaderboard = new Button("View Leaderboard");
-                leaderboard.setOnAction( ex -> new LeaderBoard(window,menu));
+                leaderboard.setOnAction( ex -> new LeaderBoard(window,menu,user));
 
                 wonVB.getChildren().addAll(userScores,leaderboard);
             }

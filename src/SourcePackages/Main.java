@@ -20,8 +20,11 @@ public class Main extends Application {
     int WIDTH = 0;
     int HEIGHT= 0;
     Scene start, menu, addUser, game, won, lost;
+    Button easy,medium,hard;
     GridPane boardContainer;
     HBox gh;
+    VBox mh;
+    Label welcomeText;
     String windowIcon = "./images/ms_logo.png";
     User userModel = new User();
     ArrayList<String> userList;
@@ -39,31 +42,29 @@ public class Main extends Application {
         window.getIcons().add(new Image(windowIcon));
 
         //menu scene elements
-        Label welcomeText = new Label("Welcome to Minesweeper :)");
-        Label selectUserText = new Label("Please select a user to begin");
+        welcomeText = new Label("Welcome to Minesweeper :)");
         welcomeText.setPadding(new Insets(0,0,100,0));
-        Button easy = new Button("Easy");
+        easy = new Button("Easy");
         easy.setOnAction(e -> {
             int[] level = setDifficulty("easy");
             this.selectedDifficulty="Easy";
             window.setScene(game);
             startGame(level);
         });
-        Button medium = new Button("Medium");
+        medium = new Button("Medium");
         medium.setOnAction(e -> {
             int[] level = setDifficulty("medium");
             this.selectedDifficulty="Medium";
             window.setScene(game);
             startGame(level);
         });
-        Button hard = new Button("Hard");
+        hard = new Button("Hard");
         hard.setOnAction(e -> {
             int[] level = setDifficulty("hard");
             this.selectedDifficulty="Hard";
             window.setScene(game);
             startGame(level);
         });
-
         MenuBar menuBar = new MenuBar();
         menuBar.prefWidthProperty().bind(window.widthProperty());
         final Menu file = new Menu("User Options");
@@ -130,7 +131,7 @@ public class Main extends Application {
 
 
         //menu scene layout
-        VBox mh = new VBox(20);
+        mh = new VBox(20);
         mh.getChildren().addAll(welcomeText,easy,medium,hard);
         mh.setAlignment(Pos.CENTER);
 
@@ -159,8 +160,22 @@ public class Main extends Application {
         boardContainer.setAlignment(Pos.CENTER);
         gameLayout.setCenter(boardContainer);
 
+        checkIfUserSelected();
         window.setScene(menu);
         window.show();
+    }
+    private void checkIfUserSelected(){
+        if (!userChosen){
+            welcomeText.setText("Please Select a user from the dropdown to begin.");
+            easy.setVisible(false);
+            medium.setVisible(false);
+            hard.setVisible(false);
+        }else{
+            welcomeText.setText("Welcome! Please choose a difficulty below.");
+            easy.setVisible(true);
+            medium.setVisible(true);
+            hard.setVisible(true);
+        }
     }
     private int[] setDifficulty(String DIFFICULTY){
         int result[] = new int[2];
@@ -190,9 +205,10 @@ public class Main extends Application {
         for (MenuItem rb : miList) {
             usersDropdown.getItems().add(rb);
             rb.setOnAction(e -> {
+                userChosen = true;
                 String chosenUser = rb.getText();
                 selectedUser = userModel.getUserId(chosenUser);
-                userChosen = true;
+                checkIfUserSelected();
             });
         }
     }
